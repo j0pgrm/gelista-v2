@@ -831,8 +831,8 @@ https://templatemo.com/tm-597-neural-glass
      padding: 0 20px;
 }
  .hexagon {
-     width: 220px;
-     height: 290px;
+     width: 275px;
+     height: 345px;
      position: relative;
      margin: 20px;
      transition: all 0.4s ease;
@@ -970,6 +970,31 @@ https://templatemo.com/tm-597-neural-glass
      z-index: 1;
      border: 3px solid rgba(255, 255, 255, 0.2);
 }
+
+.testimonial-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.testimonial-text.expanded {
+    display: block;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 8px 0 15px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+
  .timeline-year {
      font-size: 1.8rem;
      color: var(--secondary-color); 
