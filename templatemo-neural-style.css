@@ -363,7 +363,7 @@ https://templatemo.com/tm-597-neural-glass
  .hamburger-line {
      width: 25px;
      height: 3px;
-     background: var(--title-nav-color);
+     background: black; 
      margin: 3px 0;
      border-radius: 2px;
      transition: all 0.3s ease;
@@ -1603,7 +1603,7 @@ https://templatemo.com/tm-597-neural-glass
     display: block;
     width: 26px;
     height: 2px;
-    background: white;
+    background: black;
     border-radius: 2px;
 
     transition:
