@@ -109,26 +109,18 @@ https://templatemo.com/tm-597-neural-glass
 </script>
 
 <script>
-    fetch('/parts/nav.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('nav-placeholder').innerHTML = data;
-        });
-
-    fetch('/parts/footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
-        });
-</script>
-
-<script>
+    // ==========================================
+    // LOAD NAVIGATION
+    // ==========================================
     fetch('/parts/nav.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('nav-placeholder').innerHTML = data;
 
-            // Get current page
+
+            // ==========================================
+            // HIGHLIGHT CURRENT PAGE
+            // ==========================================
             let currentPath = window.location.pathname;
 
             // Remove trailing slash except for homepage
@@ -149,6 +141,51 @@ https://templatemo.com/tm-597-neural-glass
                     link.classList.add('active');
                 }
             });
+
+
+            // ==========================================
+            // MOBILE MENU
+            // ==========================================
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileNav = document.querySelector('.mobile-nav');
+
+            if (menuToggle && mobileNav) {
+
+                // Open / close menu
+                menuToggle.addEventListener('click', function () {
+                    menuToggle.classList.toggle('active');
+                    mobileNav.classList.toggle('active');
+
+                    const isOpen = mobileNav.classList.contains('active');
+                    menuToggle.setAttribute('aria-expanded', isOpen);
+                });
+
+
+                // Close menu after clicking a link
+                mobileNav.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', function () {
+                        menuToggle.classList.remove('active');
+                        mobileNav.classList.remove('active');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error loading navigation:', error);
+        });
+
+
+    // ==========================================
+    // LOAD FOOTER
+    // ==========================================
+    fetch('/parts/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error loading footer:', error);
         });
 </script>
 

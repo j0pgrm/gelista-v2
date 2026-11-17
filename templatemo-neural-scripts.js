@@ -188,3 +188,30 @@ https://templatemo.com/tm-597-neural-glass
                 }, 2000);
             }, 1500);
         });
+
+
+
+
+function initializeMobileMenu() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+
+    if (!menuToggle || !mobileNav) return;
+
+    menuToggle.addEventListener('click', function () {
+        menuToggle.classList.toggle('active');
+        mobileNav.classList.toggle('active');
+
+        const isOpen = mobileNav.classList.contains('active');
+        menuToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close menu when a navigation link is clicked
+    mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function () {
+            menuToggle.classList.remove('active');
+            mobileNav.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+}
