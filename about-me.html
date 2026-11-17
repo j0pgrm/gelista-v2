@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gelista Enterprises Consulting</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link href="templatemo-neural-style.css" rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+
+    <!--
+
+    TemplateMo 597 Neural Glass
+
+    https://templatemo.com/tm-597-neural-glass
+
+    -->
+
+
+    <style>
+
+        /* Makes service hexagons clickable */
+        .service-hexagon {
+            cursor: pointer;
+        }
+
+        /* Smooth transition when hovering */
+        .service-hexagon .hexagon-inner {
+            transition: transform 0.25s ease, filter 0.25s ease;
+        }
+
+        .service-hexagon:hover .hexagon-inner {
+            transform: translateY(-5px);
+            filter: brightness(1.1);
+        }
+
+        /* Selected service */
+        .service-hexagon.active .hexagon-inner {
+            filter: brightness(1.15);
+        }
+
+
+        /* =========================================
+           SERVICE INFORMATION
+        ========================================= */
+
+        .service-content {
+            max-width: 1200px;
+            margin: 60px auto 65px;
+            padding: 0 30px;
+        }
+
+        .service-details {
+            animation: serviceFade 0.35s ease;
+        }
+
+        .service-details p {
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .service-details ul {
+            margin: 10px 0 35px 30px;
+        }
+
+        .service-details li {
+            line-height: 1.8;
+            margin-bottom: 5px;
+        }
+
+        .service-subheading {
+            font-weight: 700;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        /* Service button */
+
+        .service-button {
+            display: block;
+            width: fit-content;
+            margin: 40px auto 0;
+            padding: 16px 32px;
+
+            background: #e00024;
+            color: #ffffff;
+
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+
+            transition: transform 0.25s ease, opacity 0.25s ease;
+        }
+
+        .service-button:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        }
+
+
+        /* Animation when changing services */
+
+        @keyframes serviceFade {
+
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 768px) {
+
+            .service-content {
+                padding: 0 20px;
+                margin-top: 40px;
+            }
+
+            .service-details p,
+            .service-details li {
+                font-size: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+    <!-- Epic Neural Background -->
+
+    <div class="neural-background"></div>
+
+
+
+    <!-- Floating Geometric Shapes -->
+
+    <div class="geometric-shapes">
+
+        <div class="shape"></div>
+
+        <div class="shape"></div>
+
+        <div class="shape"></div>
+
+        <div class="shape"></div>
+
+    </div>
+
+
+
+    <!-- Neural Network Lines -->
+
+    <div class="neural-lines">
+
+        <div class="neural-line"></div>
+
+        <div class="neural-line"></div>
+
+        <div class="neural-line"></div>
+
+    </div>
+
+
+
+    <!-- Header -->
+
+    <div id="nav-placeholder"></div>
+
+
+
+
+    <!-- =========================================
+         ABOUT ME
+    ========================================== -->
+
+    <section class="showcase" id="showcase">
+
+
+        <h2 class="section-title">
+            About Me
+        </h2>
+
+        <div class="headshot-container">
+            <img alt="" src="./images/gelista-headshot.jpg" /> 
+        </div>
+
+
+        <!-- =========================================
+             ABOUT ME OPTIONS
+        ========================================== -->
+
+        <div class="hexagon-container">
+
+
+
+            <!-- About Me -->
+
+            <div
+                class="hexagon service-hexagon active"
+                id="about-hexagon"
+                onclick="showService('about')"
+            >
+
+                <div class="hexagon-inner glass">
+
+
+                    <div class="hexagon-icon">
+                        👩‍💼
+                    </div>
+
+
+                    <h4>
+                        About Me
+                    </h4>
+
+
+                </div>
+
+            </div>
+
+
+
+
+            <!-- What My Work Entails -->
+
+            <div
+                class="hexagon service-hexagon"
+                id="work-hexagon"
+                onclick="showService('work')"
+            >
+
+                <div class="hexagon-inner glass">
+
+
+                    <div class="hexagon-icon">
+                        💼
+                    </div>
+
+
+                    <h4>
+                        What My Work Entails?
+                    </h4>
+
+
+                </div>
+
+            </div>
+
+
+
+
+            <!-- What Makes Me Different -->
+
+            <div
+                class="hexagon service-hexagon"
+                id="different-hexagon"
+                onclick="showService('different')"
+            >
+
+                <div class="hexagon-inner glass">
+
+
+                    <div class="hexagon-icon">
+                        ⭐
+                    </div>
+
+
+                    <h4>
+                        What Makes Me Different?
+                    </h4>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <!-- =========================================
+             CONTENT THAT CHANGES
+        ========================================== -->
+
+        <div
+            id="service-content"
+            class="service-content"
+        >
+
+
+            <!-- About Me is shown by default -->
+
+            <div class="service-details">
+
+
+                <p>
+
+                    I help professionals turn their career aspirations into intentional,
+                    meaningful career paths—and discover their North Star along the way.
+                    With nearly three decades of experience in Nevada and a background
+                    spanning journalism, communications, public policy, human resources,
+                    talent development, and organizational leadership, I've dedicated my
+                    career to helping people recognize their potential and take bold,
+                    courageous steps toward what's next. I've designed and led career
+                    development and internal mobility programs that have helped hundreds
+                    of employees build new skills, pursue opportunities, and advance their
+                    careers. As someone who has earned a bachelor's degree, master's degree,
+                    and doctorate, I believe deeply in lifelong learning, especially in a
+                    constantly changing professional landscape.
+
+                </p>
+
+
+                <p>
+
+                    My approach to career management is inspired by the policymaking
+                    process. Just as effective policy moves from identifying a need to
+                    creating, implementing, and evaluating a solution, your career requires
+                    the same level of intention:
+
+                </p>
+
+
+
+                <p class="service-subheading">
+                    1. Identify — Define Your Career Agenda
+                </p>
+
+
+                <p>
+
+                    What problem are you trying to solve? Are you looking for a new role,
+                    greater fulfillment, advancement, a career change, or simply clarity
+                    about what comes next? We identify where you are, where you want to go,
+                    and what matters most to you: your career North Star.
+
+                </p>
+
+
+
+                <p class="service-subheading">
+                    2. Formulate — Build Your Strategy
+                </p>
+
+
+                <p>
+
+                    Once we understand your goals, we develop a strategy to get there.
+                    This may include identifying your strengths, closing skill gaps,
+                    exploring career paths, building relationships, finding mentors,
+                    or creating a development plan.
+
+                </p>
+
+
+
+                <p class="service-subheading">
+                    3. Adopt — Define and Strengthen Your Brand
+                </p>
+
+
+                <p>
+
+                    A great career strategy only works when you can communicate your
+                    value. We clarify your professional identity and position your
+                    experience, expertise, and aspirations through your résumé,
+                    LinkedIn profile, networking presence, and personal brand.
+
+                </p>
+
+
+
+                <p class="service-subheading">
+                    4. Implement — Put Your Career Strategy Into Action
+                </p>
+
+
+                <p>
+
+                    This is where intention becomes action. We put your tools and
+                    strategy to work—whether that means applying for roles, having
+                    career conversations, networking, pursuing education, seeking
+                    stretch assignments, or positioning yourself for advancement.
+
+                </p>
+
+
+
+                <p class="service-subheading">
+                    5. Evaluate — Evolve With the Landscape
+                </p>
+
+
+                <p>
+
+                    Your career is never a finished policy. We continually assess
+                    what is working, what has changed, and what skills and experiences
+                    the market demands. Then we adjust your strategy so you remain
+                    relevant, competitive, and aligned with your goals.
+
+                </p>
+
+
+
+                <p>
+
+                    Through my career consultation business, I bring this same
+                    intentionality to individuals who are ready to gain clarity,
+                    build confidence, and take ownership of what comes next.
+                    I want people to see their careers as more than a job or a title.
+
+                    <strong>
+                        Your greatest work may still be ahead of you, and there is
+                        so much more to explore.
+                    </strong>
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- Footer -->
+
+    <div id="footer-placeholder"></div>
+
+
+
+
+    <!-- Main Template JavaScript -->
+
+    <script src="templatemo-neural-scripts.js"></script>
+
+
+
+
+    <!-- =========================================
+         CONTENT SWITCHING
+    ========================================== -->
+
+    <script>
+
+
+        function showService(service) {
+
+
+            const content =
+                document.getElementById('service-content');
+
+
+            const aboutHexagon =
+                document.getElementById('about-hexagon');
+
+
+            const workHexagon =
+                document.getElementById('work-hexagon');
+
+
+            const differentHexagon =
+                document.getElementById('different-hexagon');
+
+
+
+            /* Remove selected state */
+
+            aboutHexagon.classList.remove('active');
+
+            workHexagon.classList.remove('active');
+
+            differentHexagon.classList.remove('active');
+
+
+
+
+            /* =====================================
+               ABOUT ME
+            ===================================== */
+
+            if (service === 'about') {
+
+
+                aboutHexagon.classList.add('active');
+
+
+                content.innerHTML = `
+
+
+                    <div class="service-details">
+
+
+                        <p>
+
+                            I help professionals turn their career aspirations into intentional,
+                            meaningful career paths—and discover their North Star along the way.
+                            With nearly three decades of experience in Nevada and a background
+                            spanning journalism, communications, public policy, human resources,
+                            talent development, and organizational leadership, I've dedicated my
+                            career to helping people recognize their potential and take bold,
+                            courageous steps toward what's next. I've designed and led career
+                            development and internal mobility programs that have helped hundreds
+                            of employees build new skills, pursue opportunities, and advance their
+                            careers. As someone who has earned a bachelor's degree, master's degree,
+                            and doctorate, I believe deeply in lifelong learning, especially in a
+                            constantly changing professional landscape.
+
+                        </p>
+
+
+                        <p>
+
+                            My approach to career management is inspired by the policymaking
+                            process. Just as effective policy moves from identifying a need to
+                            creating, implementing, and evaluating a solution, your career requires
+                            the same level of intention:
+
+                        </p>
+
+
+
+                        <p class="service-subheading">
+                            1. Identify — Define Your Career Agenda
+                        </p>
+
+
+                        <p>
+
+                            What problem are you trying to solve? Are you looking for a new role,
+                            greater fulfillment, advancement, a career change, or simply clarity
+                            about what comes next? We identify where you are, where you want to go,
+                            and what matters most to you: your career North Star.
+
+                        </p>
+
+
+
+                        <p class="service-subheading">
+                            2. Formulate — Build Your Strategy
+                        </p>
+
+
+                        <p>
+
+                            Once we understand your goals, we develop a strategy to get there.
+                            This may include identifying your strengths, closing skill gaps,
+                            exploring career paths, building relationships, finding mentors,
+                            or creating a development plan.
+
+                        </p>
+
+
+
+                        <p class="service-subheading">
+                            3. Adopt — Define and Strengthen Your Brand
+                        </p>
+
+
+                        <p>
+
+                            A great career strategy only works when you can communicate your
+                            value. We clarify your professional identity and position your
+                            experience, expertise, and aspirations through your résumé,
+                            LinkedIn profile, networking presence, and personal brand.
+
+                        </p>
+
+
+
+                        <p class="service-subheading">
+                            4. Implement — Put Your Career Strategy Into Action
+                        </p>
+
+
+                        <p>
+
+                            This is where intention becomes action. We put your tools and
+                            strategy to work—whether that means applying for roles, having
+                            career conversations, networking, pursuing education, seeking
+                            stretch assignments, or positioning yourself for advancement.
+
+                        </p>
+
+
+
+                        <p class="service-subheading">
+                            5. Evaluate — Evolve With the Landscape
+                        </p>
+
+
+                        <p>
+
+                            Your career is never a finished policy. We continually assess
+                            what is working, what has changed, and what skills and experiences
+                            the market demands. Then we adjust your strategy so you remain
+                            relevant, competitive, and aligned with your goals.
+
+                        </p>
+
+
+
+                        <p>
+
+                            Through my career consultation business, I bring this same
+                            intentionality to individuals who are ready to gain clarity,
+                            build confidence, and take ownership of what comes next.
+                            I want people to see their careers as more than a job or a title.
+
+                            <strong>
+                                Your greatest work may still be ahead of you, and there is
+                                so much more to explore.
+                            </strong>
+
+                        </p>
+
+
+                    </div>
+
+                `;
+
+
+            }
+
+
+
+
+            /* =====================================
+               WHAT MY WORK ENTAILS
+            ===================================== */
+
+            else if (service === 'work') {
+
+
+                workHexagon.classList.add('active');
+
+
+                content.innerHTML = `
+
+
+                    <div class="service-details">
+
+
+                        <p>
+
+                            My work focuses on helping professionals take intentional ownership
+                            of their careers and prepare for what's next. I provide guidance
+                            across career planning and development, professional branding,
+                            résumé and cover letter development, LinkedIn positioning,
+                            interviewing and networking, effective academic and corporate
+                            communication, leadership development, stakeholder management,
+                            strategic thinking, emotional intelligence, trust-building,
+                            persuasion, and other future-focused skills.
+
+                        </p>
+
+
+                        <p>
+
+                            Through personalized coaching, reflection, practical tools,
+                            and ongoing support, I help clients identify opportunities,
+                            strengthen their professional presence, build confidence,
+                            and develop strategies that align their skills and experiences
+                            with their career goals.
+
+                        </p>
+
+
+                    </div>
+
+                `;
+
+
+            }
+
+
+
+
+            /* =====================================
+               WHAT MAKES ME DIFFERENT
+            ===================================== */
+
+            else if (service === 'different') {
+
+
+                differentHexagon.classList.add('active');
+
+
+                content.innerHTML = `
+
+
+                    <div class="service-details">
+
+
+                        <p>
+
+                            I become your trusted partner and help you build relationships
+                            along the way. I will always see your potential and continue to
+                            cheer you on as you navigate your career.
+
+                        </p>
+
+
+                        <p>
+
+                            I help you create your plan unique to you, with intention and
+                            thought. I will provide you with book recommendations, articles
+                            and give you industry insights. I listen, help build confidence,
+                            and am available to you every step of the way.
+
+                        </p>
+
+
+                    </div>
+
+                `;
+
+
+            }
+
+
+        }
+
+
+    </script>
+
+
+
+
+    <!-- =========================================
+         READ MORE BUTTONS
+    ========================================== -->
+
+    <script>
+
+
+        document.querySelectorAll('.read-more-btn').forEach(button => {
+
+
+            button.addEventListener('click', function () {
+
+
+                const testimonial =
+                    this.previousElementSibling;
+
+
+                testimonial.classList.toggle('expanded');
+
+
+                if (testimonial.classList.contains('expanded')) {
+
+
+                    this.textContent = 'Read less';
+
+
+                } else {
+
+
+                    this.textContent = 'Read more';
+
+
+                }
+
+
+            });
+
+
+        });
+
+
+    </script>
+
+
+
+
+    <!-- =========================================
+         LOAD NAV + FOOTER
+    ========================================== -->
+
+    <script>
+
+
+        /* Footer */
+
+        fetch('/parts/footer.html')
+
+            .then(response => response.text())
+
+            .then(data => {
+
+
+                document.getElementById('footer-placeholder').innerHTML = data;
+
+
+            });
+
+
+
+
+        /* Navigation */
+
+        fetch('/parts/nav.html')
+
+            .then(response => response.text())
+
+            .then(data => {
+
+
+                document.getElementById('nav-placeholder').innerHTML = data;
+
+
+
+                // Get current page
+
+                let currentPath =
+                    window.location.pathname;
+
+
+
+                // Remove trailing slash except homepage
+
+                if (
+                    currentPath.length > 1 &&
+                    currentPath.endsWith('/')
+                ) {
+
+
+                    currentPath =
+                        currentPath.slice(0, -1);
+
+
+                }
+
+
+
+                // Find all navigation links
+
+                document
+                    .querySelectorAll('.nav-links a, .mobile-nav a')
+                    .forEach(link => {
+
+
+                        let linkPath =
+                            new URL(link.href).pathname;
+
+
+
+                        if (
+                            linkPath.length > 1 &&
+                            linkPath.endsWith('/')
+                        ) {
+
+
+                            linkPath =
+                                linkPath.slice(0, -1);
+
+
+                        }
+
+
+
+                        // Highlight matching page
+
+                        if (linkPath === currentPath) {
+
+
+                            link.classList.add('active');
+
+
+                        }
+
+
+                    });
+
+
+            });
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Gelista Enterprises Consulting</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <link href="templatemo-neural-style.css" rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+
+    <!--
+
+    TemplateMo 597 Neural Glass
+
+    https://templatemo.com/tm-597-neural-glass
+
+    -->
+
+
+    <style>
+
+
+        /* =========================================
+           CONTACT PAGE
+        ========================================= */
+
+        .contact {
+            padding: 180px 0 120px;
+            position: relative;
+            min-height: 100vh;
+        }
+
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+
+            align-items: center;
+        }
+
+
+
+        /* =========================================
+           LEFT SIDE
+        ========================================= */
+
+        .contact-info {
+            padding: 40px;
+            position: relative;
+        }
+
+
+        .contact-info h3 {
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
+            line-height: 1.05;
+            color: var(--p-text-color);
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+
+        .contact-info p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--p-text-color);
+            max-width: 500px;
+            margin-bottom: 40px;
+        }
+
+
+        .contact-label {
+            color: var(--secondary-color);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+
+        .contact-email {
+            color: var(--p-text-color);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+
+        .contact-email:hover {
+            color: var(--secondary-color);
+        }
+
+
+
+        /* =========================================
+           CONTACT FORM
+        ========================================= */
+
+        .contact-form {
+            padding: 50px 40px;
+        }
+
+
+        .contact-form h2 {
+            color: var(--p-text-color);
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 35px;
+        }
+
+
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px 20px;
+
+            background: rgba(255, 255, 255, 0.05);
+
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+
+            color: var(--p-text-color);
+
+            font-family: inherit;
+            font-size: 1rem;
+
+            backdrop-filter: blur(10px);
+
+            transition: all 0.3s ease;
+        }
+
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+
+            border-color: var(--tertiary-color);
+
+            box-shadow:
+                0 0 20px rgba(0, 206, 209, 0.3);
+
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #666;
+        }
+
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 140px;
+        }
+
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 1024px) {
+
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+        }
+
+
+        @media (max-width: 768px) {
+
+            .contact {
+                padding: 130px 0 80px;
+            }
+
+
+            .contact-container {
+                padding: 0 20px;
+            }
+
+
+            .contact-info,
+            .contact-form {
+                padding: 30px 20px;
+            }
+
+
+            .contact-info h3 {
+                font-size: 2.2rem;
+            }
+
+        }
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+
+    <!-- =========================================
+         BACKGROUND
+    ========================================== -->
+
+    <div class="neural-background"></div>
+
+
+
+    <!-- Floating Geometric Shapes -->
+
+    <div class="geometric-shapes">
+
+        <div class="shape"></div>
+
+        <div class="shape"></div>
+
+        <div class="shape"></div>
+
+        <div class="shape"></div>
+
+    </div>
+
+
+
+    <!-- Neural Network Lines -->
+
+    <div class="neural-lines">
+
+        <div class="neural-line"></div>
+
+        <div class="neural-line"></div>
+
+        <div class="neural-line"></div>
+
+    </div>
+
+
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <div id="nav-placeholder"></div>
+
+
+
+
+    <!-- =========================================
+         CONTACT
+    ========================================== -->
+
+    <section class="contact" id="contact">
+
+
+        <div class="contact-container">
+
+
+
+            <!-- =====================================
+                 LEFT SIDE
+            ====================================== -->
+
+            <div class="contact-info">
+
+
+                <h3>
+
+                    Gelista Enterprises<br>
+                    Consulting
+
+                </h3>
+
+
+                <p>
+
+                    Helping individuals grow in their careers through resume
+                    support, recruiter communication guidance, and strategies
+                    to confidently present their skills and experience.
+
+                </p>
+
+
+
+                <div class="contact-label">
+
+                    ✉ &nbsp; CONTACT
+
+                </div>
+
+
+                <a
+                    href="mailto:gelistaenterprises@gmail.com"
+                    class="contact-email"
+                >
+
+                    gelistaenterprises@gmail.com
+
+                </a>
+
+
+            </div>
+
+
+
+
+            <!-- =====================================
+                 RIGHT SIDE / NETLIFY FORM
+            ====================================== -->
+
+            <div>
+
+
+                <form
+                    name="contact"
+                    method="POST"
+                    data-netlify="true"
+                    class="contact-form glass"
+                >
+
+
+                    <!-- Hidden input for Netlify -->
+
+                    <input
+                        type="hidden"
+                        name="form-name"
+                        value="contact"
+                    >
+
+
+
+                    <h2>
+                        Request an Appointment
+                    </h2>
+
+
+
+                    <!-- Name -->
+
+                    <div class="form-group">
+
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Name"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- Subject -->
+
+                    <div class="form-group">
+
+                        <input
+                            type="text"
+                            name="subject"
+                            placeholder="Subject"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- Message -->
+
+                    <div class="form-group">
+
+                        <textarea
+                            name="message"
+                            rows="5"
+                            placeholder="Message"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <!-- Submit -->
+
+                    <button
+                        type="submit"
+                        class="cta-button"
+                        style="border: none"
+                    >
+
+                        Send
+
+                    </button>
+
+
+                </form>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <div id="footer-placeholder"></div>
+
+
+
+
+    <!-- =========================================
+         MAIN TEMPLATE JAVASCRIPT
+    ========================================== -->
+
+    <script src="templatemo-neural-scripts.js"></script>
+
+
+
+
+    <!-- =========================================
+         LOAD NAV + FOOTER
+    ========================================== -->
+
+    <script>
+
+
+        /* Footer */
+
+        fetch('/parts/footer.html')
+
+            .then(response => response.text())
+
+            .then(data => {
+
+                document.getElementById('footer-placeholder').innerHTML = data;
+
+            });
+
+
+
+        /* Navigation */
+
+        fetch('/parts/nav.html')
+
+            .then(response => response.text())
+
+            .then(data => {
+
+
+                document.getElementById('nav-placeholder').innerHTML = data;
+
+
+                // Get current page
+
+                let currentPath =
+                    window.location.pathname;
+
+
+                // Remove trailing slash except homepage
+
+                if (
+                    currentPath.length > 1 &&
+                    currentPath.endsWith('/')
+                ) {
+
+                    currentPath =
+                        currentPath.slice(0, -1);
+
+                }
+
+
+                // Find all navigation links
+
+                document
+                    .querySelectorAll('.nav-links a, .mobile-nav a')
+                    .forEach(link => {
+
+
+                        let linkPath =
+                            new URL(link.href).pathname;
+
+
+                        if (
+                            linkPath.length > 1 &&
+                            linkPath.endsWith('/')
+                        ) {
+
+                            linkPath =
+                                linkPath.slice(0, -1);
+
+                        }
+
+
+                        // Highlight matching page
+
+                        if (linkPath === currentPath) {
+
+                            link.classList.add('active');
+
+                        }
+
+
+                    });
+
+
+            });
+
+
+    </script>
+
+
+</body>
+
+</html>

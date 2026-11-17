@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelista Enterprises Consulting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="templatemo-neural-style.css" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+<!--
+
+TemplateMo 597 Neural Glass
+
+https://templatemo.com/tm-597-neural-glass
+
+-->
+    <style>
+       
+    </style>
+</head>
+<body>
+    <!-- Epic Neural Background -->
+    <div class="neural-background"></div>
+    
+    <!-- Floating Geometric Shapes -->
+    <div class="geometric-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- Neural Network Lines -->
+    <div class="neural-lines">
+        <div class="neural-line"></div>
+        <div class="neural-line"></div>
+        <div class="neural-line"></div>
+    </div>
+
+    <!-- Header -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Section 1: Hero -->
+    <section class="inspired-main">
+        <div class="inspired-grid">
+           
+            <img alt="" src="/images/img-1.jpg" /> 
+            <img alt="" src="/images/img-2.jpg" /> 
+            <img alt="" src="/images/img-3.jpg" /> 
+            <img alt="" src="/images/img-4.jpg" /> 
+            <img alt="" src="/images/img-5.jpg" /> 
+            <img alt="" src="/images/img-6.jpg" /> 
+            <img alt="" src="/images/img-7.jpg" /> 
+            <img alt="" src="/images/img-8.jpg" /> 
+            <img alt="" src="/images/img-9.jpg" /> 
+            <img alt="" src="/images/img-10.jpg" /> 
+            <img alt="" src="/images/img-11.jpg" /> 
+            <img alt="" src="/images/img-12.jpg" /> 
+            <img alt="" src="/images/img-13.jpg" /> 
+            <img alt="" src="/images/img-14.jpg" /> 
+            <img alt="" src="/images/img-15.jpg" /> 
+            <img alt="" src="/images/img-19.jpg" /> 
+            <img alt="" src="/images/img-20.jpg" /> 
+            <img alt="" src="/images/img-21.jpg" /> 
+            <img alt="" src="/images/img-22.jpg" /> 
+            <img alt="" src="/images/img-23.jpg" /> 
+            <img alt="" src="/images/img-24.jpg" /> 
+            <img alt="" src="/images/img-25.jpg" /> 
+            <img alt="" src="/images/img-26.jpg" /> 
+            <img alt="" src="/images/img-27.jpg" /> 
+            <img alt="" src="/images/img-28.jpg" /> 
+            <img alt="" src="/images/img-29.jpg" /> 
+            <img alt="" src="/images/img-30.jpg" /> 
+
+            <img alt="" src="/images/img-31.jpg" /> 
+            <img alt="" src="/images/img-32.jpg" /> 
+            <img alt="" src="/images/img-33.jpg" /> 
+            <img alt="" src="/images/img-34.jpg" /> 
+            <img alt="" src="/images/img-35.jpg" /> 
+            <img alt="" src="/images/img-36.jpg" /> 
+
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+<script src="templatemo-neural-scripts.js"></script>
+
+<script>
+    document.querySelectorAll('.read-more-btn').forEach(button => {
+        button.addEventListener('click', function () {
+            const testimonial = this.previousElementSibling;
+
+            testimonial.classList.toggle('expanded');
+
+            if (testimonial.classList.contains('expanded')) {
+                this.textContent = 'Read less';
+            } else {
+                this.textContent = 'Read more';
+            }
+        });
+    });
+</script>
+
+<script>
+    fetch('/parts/nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
+
+    fetch('/parts/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+</script>
+
+<script>
+    fetch('/parts/nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+
+            // Get current page
+            let currentPath = window.location.pathname;
+
+            // Remove trailing slash except for homepage
+            if (currentPath.length > 1 && currentPath.endsWith('/')) {
+                currentPath = currentPath.slice(0, -1);
+            }
+
+            // Find all navigation links
+            document.querySelectorAll('.nav-links a, .mobile-nav a').forEach(link => {
+                let linkPath = new URL(link.href).pathname;
+
+                if (linkPath.length > 1 && linkPath.endsWith('/')) {
+                    linkPath = linkPath.slice(0, -1);
+                }
+
+                // Highlight matching page
+                if (linkPath === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+        });
+</script>
+
+
+</body>
+</html>

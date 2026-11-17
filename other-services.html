@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gelista Enterprises Consulting</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link href="templatemo-neural-style.css" rel="stylesheet">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+
+    <!--
+
+    TemplateMo 597 Neural Glass
+
+    https://templatemo.com/tm-597-neural-glass
+
+    -->
+
+
+    <style>
+
+        /* Makes service hexagons clickable */
+        .service-hexagon {
+            cursor: pointer;
+        }
+
+        /* Smooth transition when hovering */
+        .service-hexagon .hexagon-inner {
+            transition: transform 0.25s ease, filter 0.25s ease;
+        }
+
+        .service-hexagon:hover .hexagon-inner {
+            transform: translateY(-5px);
+            filter: brightness(1.1);
+        }
+
+        /* Selected service */
+        .service-hexagon.active .hexagon-inner {
+            filter: brightness(1.15);
+        }
+
+
+        /* =========================================
+           SERVICE INFORMATION
+        ========================================= */
+
+        .service-content {
+            max-width: 1200px;
+            margin: 60px auto 65px;
+            padding: 0 30px;
+        }
+
+        .service-details {
+            animation: serviceFade 0.35s ease;
+        }
+
+        .service-details p {
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .service-details ul {
+            margin: 10px 0 35px 30px;
+        }
+
+        .service-details li {
+            line-height: 1.8;
+            margin-bottom: 5px;
+        }
+
+        .service-subheading {
+            font-weight: 700;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        /* Service button */
+
+        /* .service-button {
+            display: block;
+            width: fit-content;
+            margin: 40px auto 0;
+            padding: 16px 32px;
+
+            background: #e00024;
+            color: #ffffff;
+
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: transform 0.25s ease, opacity 0.25s ease;
+        }
+
+        .service-button:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        } */
+
+        .service-button {
+            display: block;
+            width: fit-content;
+            margin: 40px auto 0;
+            padding: 15px 25px;
+            background: var(--button-background);
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none; 
+            text-align: center; 
+        }
+
+        .service-button:hover {
+            transform: translateY(-3px);
+            box-shadow:
+                0 10px 30px rgba(209, 0, 122, 0.3);
+        }
+
+
+        /* Animation when changing services */
+
+        @keyframes serviceFade {
+
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 768px) {
+
+            .service-content {
+                padding: 0 20px;
+                margin-top: 40px;
+            }
+
+            .service-details p,
+            .service-details li {
+                font-size: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+    <!-- Epic Neural Background -->
+
+    <div class="neural-background"></div>
+
+
+
+    <!-- Floating Geometric Shapes -->
+
+    <div class="geometric-shapes">
+
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+
+    </div>
+
+
+
+    <!-- Neural Network Lines -->
+
+    <div class="neural-lines">
+
+        <div class="neural-line"></div>
+        <div class="neural-line"></div>
+        <div class="neural-line"></div>
+
+    </div>
+
+
+
+    <!-- Header -->
+
+    <div id="nav-placeholder"></div>
+
+
+
+
+    <!-- =========================================
+         SERVICES
+    ========================================== -->
+
+    <section class="showcase" id="showcase">
+
+
+        <h2 class="section-title">
+            Your career is too important to leave on autopilot.
+        </h2>
+
+        <div class="hero-description" style="margin-bottom: 65px">
+            <p>Gelista Enterprises Consulting is built around one idea: you should not have to guess how to present yourself, communicate your value, or move forward with confidence. Every option is designed to give you a clearer story, stronger materials, and practical support you can actually use.</p>
+        </div>
+
+
+
+        <!-- =========================================
+             SERVICE HEXAGONS
+        ========================================== -->
+
+        <div class="hexagon-container2x2">
+
+
+
+            <!-- Resume+ -->
+
+            <div
+                class="hexagon service-hexagon active"
+                id="resume-hexagon"
+                onclick="showService('resume')"
+            >
+
+                <div class="hexagon-inner glass">
+
+
+                    <div class="hexagon-icon">
+                        📄
+                    </div>
+
+
+                    <h4>
+                        Resume+
+                    </h4>
+
+
+                </div>
+
+            </div>
+
+
+
+
+            <!-- Career Package -->
+
+            <div
+                class="hexagon service-hexagon"
+                id="career-hexagon"
+                onclick="showService('career')"
+            >
+
+                <div class="hexagon-inner glass">
+
+
+                    <div class="hexagon-icon">
+                        💼
+                    </div>
+
+
+                    <h4>
+                        Career Package
+                    </h4>
+
+
+                </div>
+
+            </div>
+
+
+
+
+            <!-- College Package -->
+
+            <div
+                class="hexagon service-hexagon"
+                id="college-hexagon"
+                onclick="showService('college')"
+            >
+
+                <div class="hexagon-inner glass">
+
+
+                    <div class="hexagon-icon">
+                        🎓
+                    </div>
+
+
+                    <h4>
+                        College Package
+                    </h4>
+
+
+                </div>
+
+            </div>
+
+
+
+
+            <!-- Hourly Consulting -->
+
+            <div
+                class="hexagon service-hexagon"
+                id="hourly-hexagon"
+                onclick="showService('hourly')"
+            >
+
+                <div class="hexagon-inner glass">
+
+
+                    <div class="hexagon-icon">
+                        💬
+                    </div>
+
+
+                    <h4>
+                        Hourly Consulting Options
+                    </h4>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <!-- =========================================
+             CONTENT THAT CHANGES
+        ========================================== -->
+
+        <div
+            id="service-content"
+            class="service-content"
+        >
+
+
+            <!-- Resume+ is shown by default -->
+
+            <div class="service-details">
+
+
+                <p>
+
+                    This is the focused path if you need your documents and digital
+                    presence to work harder for you.
+
+                </p>
+
+
+                <p>
+
+                    You begin with a live intake so the work is tailored to *your*
+                    background and goals, not a generic template. From there you get
+                    a professionally developed résumé and cover letter, plus LinkedIn
+                    branding and updates that make your profile feel cohesive instead
+                    of scattered. Ongoing review and feedback mean you are not left
+                    with a one-and-done file; you have a partner as you refine how you
+                    show up as a candidate.
+
+                </p>
+
+
+                <p>
+
+                    ⭐ <strong>Benefit</strong> ⭐
+                    You walk away looking sharper, more consistent, and easier for
+                    hiring managers and recruiters to understand—without having to
+                    figure out every line yourself.
+
+                </p>
+
+
+                <a href="/contact.html" class="service-button">
+                    INQUIRE ABOUT SERVICE
+                </a>
+                
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- Footer -->
+
+    <div id="footer-placeholder"></div>
+
+
+
+
+    <!-- Main Template JavaScript -->
+
+    <script src="templatemo-neural-scripts.js"></script>
+
+
+
+
+    <!-- =========================================
+         SERVICE SWITCHING
+    ========================================== -->
+
+    <script>
+
+
+        function showService(service) {
+
+
+            const content =
+                document.getElementById('service-content');
+
+
+            const resumeHexagon =
+                document.getElementById('resume-hexagon');
+
+
+            const careerHexagon =
+                document.getElementById('career-hexagon');
+
+
+            const collegeHexagon =
+                document.getElementById('college-hexagon');
+
+
+            const hourlyHexagon =
+                document.getElementById('hourly-hexagon');
+
+
+
+            /* Remove selected state from all cards */
+
+            resumeHexagon.classList.remove('active');
+
+            careerHexagon.classList.remove('active');
+
+            collegeHexagon.classList.remove('active');
+
+            hourlyHexagon.classList.remove('active');
+
+
+
+
+            /* =====================================
+               RESUME+
+            ===================================== */
+
+            if (service === 'resume') {
+
+
+                resumeHexagon.classList.add('active');
+
+
+                content.innerHTML = `
+
+
+                    <div class="service-details">
+
+
+                        <p>
+
+                            This is the focused path if you need your documents and
+                            digital presence to work harder for you.
+
+                        </p>
+
+
+                        <p>
+
+                            You begin with a live intake so the work is tailored to
+                            <em>your</em> background and goals, not a generic template.
+                            From there you get a professionally developed résumé and
+                            cover letter, plus LinkedIn branding and updates that make
+                            your profile feel cohesive instead of scattered. Ongoing
+                            review and feedback mean you are not left with a one-and-done
+                            file; you have a partner as you refine how you show up as
+                            a candidate.
+
+                        </p>
+
+
+                        <p>
+
+                            ⭐ <strong>Benefit</strong> ⭐
+                            You walk away looking sharper, more consistent, and easier
+                            for hiring managers and recruiters to understand—without
+                            having to figure out every line yourself.
+
+                        </p>
+
+
+                        <a href="/contact.html" class="service-button">
+                            INQUIRE ABOUT SERVICE
+                        </a>
+
+
+                    </div>
+
+                `;
+
+
+            }
+
+
+
+
+            /* =====================================
+               CAREER PACKAGE
+            ===================================== */
+
+            else if (service === 'career') {
+
+
+                careerHexagon.classList.add('active');
+
+
+                content.innerHTML = `
+
+
+                    <div class="service-details">
+
+
+                        <p>
+
+                            This is the deeper partnership for people who want more
+                            than documents. It is two months of reflective sessions,
+                            ongoing consultation, and hands-on development of your
+                            professional brand.
+
+                        </p>
+
+
+                        <p>
+
+                            You still get a strong résumé, cover letter, and LinkedIn
+                            presence—but those sit inside a larger process: clarifying
+                            how you want to be known, practicing how you talk about your
+                            work, and getting support on presentations and the tools
+                            that help you stand out whether you are applying outside
+                            or advancing inside an organization. Reminders and
+                            career-development resources keep momentum going between
+                            meetings.
+
+                        </p>
+
+
+                        <p>
+
+                            ⭐ <strong>Benefit</strong> ⭐
+                            You are not just updating paperwork. You are building a
+                            clearer professional identity and a support system that
+                            helps you show up with more intention in interviews,
+                            meetings, and day-to-day career decisions.
+
+                        </p>
+
+
+                        <a href="/contact.html" class="service-button">
+                            INQUIRE ABOUT SERVICE
+                        </a>
+
+
+                    </div>
+
+                `;
+
+
+            }
+
+
+
+
+            /* =====================================
+               COLLEGE PACKAGE
+            ===================================== */
+
+            else if (service === 'college') {
+
+
+                collegeHexagon.classList.add('active');
+
+
+                content.innerHTML = `
+
+
+                    <div class="service-details">
+
+
+                        <p>
+
+                            For students and applicants navigating admissions and
+                            early-career presentation, this option covers the materials
+                            that often decide who gets a second look: admission essays
+                            and letters, recommendation strategy, résumé help, interview
+                            prep, and how to stand out as a candidate.
+
+                        </p>
+
+
+                        <p>
+
+                            ⭐ <strong>Benefit</strong> ⭐
+                            You get structured support on the high-stakes documents
+                            and conversations that open doors—so your application and
+                            interviews reflect your actual potential instead of
+                            last-minute guesswork.
+
+                        </p>
+
+
+                        <p>
+
+                            <em>
+                                Options can be combined based on what you actually need.
+                                If you are unsure where to start, a conversation first
+                                is the simplest way to match the right support to your
+                                next step.
+                            </em>
+
+                        </p>
+
+
+                        <a href="/contact.html" class="service-button">
+                            INQUIRE ABOUT SERVICE
+                        </a>
+
+
+                    </div>
+
+                `;
+
+
+            }
+
+
+
+
+            /* =====================================
+               HOURLY CONSULTING OPTIONS
+            ===================================== */
+
+            else if (service === 'hourly') {
+
+
+                hourlyHexagon.classList.add('active');
+
+
+                content.innerHTML = `
+
+
+                    <div class="service-details">
+
+
+                        <p>
+
+                            When you need targeted help rather than a full package,
+                            hourly sessions let you go deep on the skill that is
+                            blocking you right now.
+
+                        </p>
+
+
+                        <ul>
+
+
+                            <li>
+
+                                <strong>“Effective Communication”</strong>
+                                gives you tools for academic and corporate settings:
+                                storytelling, persuasion, and presenting with
+                                presence—both in the room and on camera.
+
+                            </li>
+
+
+                            <li>
+
+                                <strong>“General Hourly Consulting”</strong>
+                                is flexible. Bring the topic that matters that week:
+                                leadership, stakeholder management, networking,
+                                interviewing, résumé strategy, or persuasion.
+
+                            </li>
+
+
+                            <li>
+
+                                <strong>“Skills of the Future”</strong>
+                                focuses on capabilities that travel with you:
+                                emotional intelligence, trust, leadership, and
+                                strategic thinking.
+
+                            </li>
+
+
+                        </ul>
+
+
+                        <p>
+
+                            ⭐ <strong>Benefit</strong> ⭐
+                            You get concentrated, practical guidance on the exact
+                            capability you need to strengthen—without committing to
+                            a longer program if that is not what you need today.
+
+                        </p>
+
+
+                        <a href="/contact.html" class="service-button">
+                            INQUIRE ABOUT SERVICE
+                        </a>
+
+
+                    </div>
+
+                `;
+
+
+            }
+
+
+        }
+
+
+    </script>
+
+
+
+
+    <!-- =========================================
+         READ MORE BUTTONS
+    ========================================== -->
+
+    <script>
+
+
+        document.querySelectorAll('.read-more-btn').forEach(button => {
+
+
+            button.addEventListener('click', function () {
+
+
+                const testimonial =
+                    this.previousElementSibling;
+
+
+                testimonial.classList.toggle('expanded');
+
+
+                if (testimonial.classList.contains('expanded')) {
+
+
+                    this.textContent = 'Read less';
+
+
+                } else {
+
+
+                    this.textContent = 'Read more';
+
+
+                }
+
+
+            });
+
+
+        });
+
+
+    </script>
+
+
+
+
+    <!-- =========================================
+         LOAD NAV + FOOTER
+    ========================================== -->
+
+    <script>
+
+
+        /* Footer */
+
+        fetch('/parts/footer.html')
+
+            .then(response => response.text())
+
+            .then(data => {
+
+
+                document.getElementById('footer-placeholder').innerHTML = data;
+
+
+            });
+
+
+
+
+        /* Navigation */
+
+        fetch('/parts/nav.html')
+
+            .then(response => response.text())
+
+            .then(data => {
+
+
+                document.getElementById('nav-placeholder').innerHTML = data;
+
+
+
+                // Get current page
+
+                let currentPath =
+                    window.location.pathname;
+
+
+
+                // Remove trailing slash except homepage
+
+                if (
+                    currentPath.length > 1 &&
+                    currentPath.endsWith('/')
+                ) {
+
+
+                    currentPath =
+                        currentPath.slice(0, -1);
+
+
+                }
+
+
+
+                // Find all navigation links
+
+                document
+                    .querySelectorAll('.nav-links a, .mobile-nav a')
+                    .forEach(link => {
+
+
+                        let linkPath =
+                            new URL(link.href).pathname;
+
+
+
+                        if (
+                            linkPath.length > 1 &&
+                            linkPath.endsWith('/')
+                        ) {
+
+
+                            linkPath =
+                                linkPath.slice(0, -1);
+
+
+                        }
+
+
+
+                        // Highlight matching page
+
+                        if (linkPath === currentPath) {
+
+
+                            link.classList.add('active');
+
+
+                        }
+
+
+                    });
+
+
+            });
+
+
+    </script>
+
+
+</body>
+
+</html>
