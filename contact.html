@@ -539,6 +539,23 @@
                         menuToggle.setAttribute('aria-expanded', 'false');
                     });
                 });
+
+
+                // ==========================================
+                // CLOSE MENU WHEN CLICKING OUTSIDE
+                // ==========================================
+                document.addEventListener('click', function (event) {
+
+                    const clickedInsideMenu = mobileNav.contains(event.target);
+                    const clickedMenuButton = menuToggle.contains(event.target);
+
+                    // If click was outside both the menu and hamburger button
+                    if (!clickedInsideMenu && !clickedMenuButton) {
+                        menuToggle.classList.remove('active');
+                        mobileNav.classList.remove('active');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
             }
         })
         .catch(error => {

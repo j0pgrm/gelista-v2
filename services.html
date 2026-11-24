@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gelista Enterprises Consulting</title>
+    <title>Services | Gelista Enterprises Consulting</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -535,7 +535,7 @@
          LOAD NAV + FOOTER
     ========================================== -->
 
-    <script>
+<script>
     // ==========================================
     // LOAD NAVIGATION
     // ==========================================
@@ -595,6 +595,23 @@
                         mobileNav.classList.remove('active');
                         menuToggle.setAttribute('aria-expanded', 'false');
                     });
+                });
+
+
+                // ==========================================
+                // CLOSE MENU WHEN CLICKING OUTSIDE
+                // ==========================================
+                document.addEventListener('click', function (event) {
+
+                    const clickedInsideMenu = mobileNav.contains(event.target);
+                    const clickedMenuButton = menuToggle.contains(event.target);
+
+                    // If click was outside both the menu and hamburger button
+                    if (!clickedInsideMenu && !clickedMenuButton) {
+                        menuToggle.classList.remove('active');
+                        mobileNav.classList.remove('active');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                    }
                 });
             }
         })

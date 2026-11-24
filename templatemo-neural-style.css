@@ -334,48 +334,68 @@ https://templatemo.com/tm-597-neural-glass
     }
 }
 /* Mobile Menu */
- .mobile-menu-toggle {
-     display: none;
-     flex-direction: column;
-     cursor: pointer;
-     padding: 8px;
-     border-radius: 8px;
-     background: rgba(255, 255, 255, 0.05);
-     border: 1px solid rgba(255, 255, 255, 0.1);
-     transition: all 0.3s ease;
+.mobile-menu-toggle {
+    display: none;
+    position: relative;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    z-index: 1001;
 }
- .mobile-menu-toggle:hover {
-     background: rgba(224, 163, 255, 0.1);
-     box-shadow: 0 0 15px rgba(224, 163, 255, 0.3);
+
+.hamburger-line {
+    position: absolute;
+    left: 50%;
+
+    width: 26px;
+    height: 2px;
+
+    background: black;
+    border-radius: 2px;
+
+    transform: translateX(-50%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
-/* Mobile menu active state */
-.mobile-nav a.active {
-    background: linear-gradient(135deg, rgba(224, 163, 255, 0.2), rgba(255, 105, 180, 0.15));
-    color: var(--secondary-color); 
-    border: 1px solid rgba(224, 163, 255, 0.4);
-    box-shadow: 
-        0 0 25px rgba(224, 163, 255, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
-    text-shadow: 0 0 10px rgba(224, 163, 255, 0.6);
+
+/* Position the 3 lines */
+.hamburger-line:nth-child(1) {
+    top: 13px;
 }
- .hamburger-line {
-     width: 25px;
-     height: 3px;
-     background: black; 
-     margin: 3px 0;
-     border-radius: 2px;
-     transition: all 0.3s ease;
+
+.hamburger-line:nth-child(2) {
+    top: 21px;
 }
- .mobile-menu-toggle.active .hamburger-line:nth-child(1) {
-     transform: rotate(45deg) translate(9px, 9px);
+
+.hamburger-line:nth-child(3) {
+    top: 29px;
 }
- .mobile-menu-toggle.active .hamburger-line:nth-child(2) {
-     opacity: 0;
+
+/* Turn into X */
+.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+    top: 21px;
+    transform: translateX(-50%) rotate(45deg);
 }
- .mobile-menu-toggle.active .hamburger-line:nth-child(3) {
-     transform: rotate(-45deg) translate(7px, -6px);
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+    opacity: 0;
 }
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+    top: 21px;
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+
+
+
+
+
  .mobile-nav {
      position: fixed;
      top: 90px;
@@ -1294,6 +1314,10 @@ https://templatemo.com/tm-597-neural-glass
      .timeline-content {
          /* max-width: 100%; */
     }
+
+    .headshot-container img {
+        width: 30%; 
+    }
 }
 @media (max-width: 1100px) {
     .nav-links {
@@ -1727,3 +1751,4 @@ https://templatemo.com/tm-597-neural-glass
         padding: 0 20px;
     }
 }
+
