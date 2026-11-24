@@ -368,6 +368,19 @@ https://templatemo.com/tm-597-neural-glass
     top: 13px;
 }
 
+.headshot-container {
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-bottom: 75px; 
+}
+
+.headshot-container img {
+    border-radius: 100%; 
+    width: 20%; 
+}
+
 .hamburger-line:nth-child(2) {
     top: 21px;
 }
@@ -1602,19 +1615,6 @@ https://templatemo.com/tm-597-neural-glass
     transition:
         transform 0.3s ease,
         filter 0.3s ease;
-}
-
-.headshot-container {
-    width: 100%; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    margin-bottom: 75px; 
-}
-
-.headshot-container img {
-    border-radius: 100%; 
-    width: 20%; 
 }
 
 .hexagon-container2x2 {
